@@ -1,0 +1,14 @@
+How to copy .zip file from one server to another server?
+
+Open Terminal> CTRL+ALT+T
+
+login using SSH
+
+cd /var/www/html HIT ENTER
+
+wget http://your.domain.name/upload/backup.zip
+
+
+unzip backup.zip
+
+Great!
