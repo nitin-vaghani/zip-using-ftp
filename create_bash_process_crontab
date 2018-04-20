@@ -1,0 +1,55 @@
+Open Terminal >
+
+Login using root >
+
+Go to your home directory > cd /home/username/bin HIT ENTER
+
+now create new bash file using supperted editor like > nano clearcache.sh
+
+
+COPY & PAST BELOW CODE
+
+################
+
+echo "Clear cache start";
+
+sudo sh -c 'echo 1 >/proc/sys/vm/drop_caches';
+sudo sh -c 'echo 2 >/proc/sys/vm/drop_caches';
+sudo sh -c 'echo 3 >/proc/sys/vm/drop_caches';
+
+echo "Cache cleared";
+
+#################
+
+Save file with "clearcache.sh" name
+
+set permission > chmod -R 0755 clearcache.sh
+
+Now create one log file for get cron result response > nano clearcache.log  SAVE FILE
+
+set permission > chmod -R 0755 clearcache.log
+
+
+Now open your crontab using > crontab -e
+
+COPY & PAST below line end of file > 0 0 7 * * /home/imobdev6/bin/clearcache.sh >> /home/imobdev6/bin/clearcache.log 2>&1
+
+Save crontable
+
+RESPONSE YOU WILL GET "crontab: installing new crontab"
+
+Enjoy!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
